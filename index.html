@@ -23,11 +23,20 @@
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <!-- ################ CSS ############# -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> change to JQM-->
+        <link rel="stylesheet" type="text/css" href="css/themes/default/jquery.mobile-1.4.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+        <!-- ################ JS ############## -->
+        <!-- <script type="text/javascript" src="phonegap.js"></script> -->
+        <script type="text/javascript" src="js/lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/lib/jquery/jquery.mobile-1.4.1.min.js"></script>
+        <title>Bird Book</title>
     </head>
     <body>
-        <div class="app">
+        
+        <!--<div class="app">
             <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -38,6 +47,77 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-        </script>
+        </script> -->
+        <div data-role="page" id="homePage">
+            <div data-role="header">
+                <h1 id="appName">Bird Book</h1>
+            </div>
+            <div data-role="content">
+                <table>
+                    <tr>
+                        <td><a href="#birdListPage">Birds</a></td>
+                        <td><a href="#mapPage">Map</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#memoPage">Memo</td>
+                        <td><a href="settingPage">Settings</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div data-role="page" id="birdListPage">
+            
+        </div>
+
+        <div data-role="page" id="mapPage">
+            <div data-role="header">
+                <h1 class="pageName">Map</h1>
+            </div>
+            <div data-role="content">
+                
+            </div>
+            <div data-role="footer">
+
+            </div>
+        </div>
+
+        <div data-role="page" id="memoPage">
+            <div data-role="header">
+                <h1 class="pageName">Memo</h1>
+            </div>
+            <div data-role="content">
+                
+            </div>
+            <div data-role="footer">
+
+            </div>
+        </div>
+
+        <div data-role="page" id="settingPage">
+            <div data-role="header">
+                <h1 class="pageName">Setting</h1>
+            </div>
+            <div data-role="content">
+                
+            </div>
+            <div data-role="footer">
+
+            </div>
+        </div>
+
+        <div data-role="page" id="detailPage">
+            <div data-role="header">
+                <h1 class="birdName"></h1>
+            </div>
+            <div data-role="content">
+                
+            </div>
+            <div data-role="footer">
+
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/homePage.js"></script>
     </body>
 </html>
